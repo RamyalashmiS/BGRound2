@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  comp1, comp2 {
+    flex: 1;
+    margin: 10px;
+  }

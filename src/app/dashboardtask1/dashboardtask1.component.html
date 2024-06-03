@@ -1,0 +1,19 @@
+<!-- Dashboard -->
+<div class="container-fluid">
+    <div *ngIf="userDetails.length>0; else notfound">
+        <div class="row col-10" *ngFor="let det of userDetails; let i = index">
+            <div class="float-left">
+                <p>Name : {{det["Name"]}} </p>
+                <p>Lat :{{det["Lat"]}} </p>
+                <p>Long :{{det["Long"]}} </p>
+            </div>
+            <div class="float-right">
+                <img src="assets/download.jpeg" [alt]="det['Name']">
+            </div>
+        </div>
+    </div>
+
+    <ng-template #notfound>
+        <p>Data not found!</p>
+    </ng-template>
+</div>

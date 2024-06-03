@@ -1,0 +1,9 @@
+<div class="container row offset-3">
+    <p class="redBox col-3 m-2" (click)="colorChange('red')"></p>
+    <p class="blueBox col-3 m-2" (click)="colorChange('blue')"></p>
+    <p class="greenBox col-3 m-2" (click)="colorChange('green')"></p>
+</div>
+
+<div class="offset-4 mt-4">
+    <p class="circle" [style.backgroundColor]="color" ></p>
+</div>

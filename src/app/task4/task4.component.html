@@ -1,0 +1,21 @@
+<!-- Task 4 -->
+<div class="col-6">
+    <label for="num">Enter a number</label>
+    <input class="form-control" type="number" #number name="number" id="num" (keyup)="statusNumber=number.valueAsNumber" />
+
+    <div [ngSwitch]="statusNumber">
+        <div *ngSwitchCase="0">
+            <span style="color: red;">Rejected</span>
+        </div>
+        <div *ngSwitchCase="1">
+            <span style="color: green;">Approved</span>
+        </div>
+        <div *ngSwitchCase="2">
+            <span style="color: orange;">Pending</span>
+        </div>
+        <div *ngSwitchDefault>
+            <span >Error</span>
+        </div>
+    </div>
+</div>
+
